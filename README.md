@@ -1,2 +1,72 @@
-# nhsuk-buttons-test
-Testing smaller buttons for NHSUK frontend.
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>Smaller checkboxes and radios</h1>
+
+      <h2>Smaller checkboxes</h2>
+      <p>Use standard-sized checkboxes in nearly all cases. However, smaller versions work well on pages where it’s helpful to make them less visually prominent.</p>
+      <p>For example, on a page of search results, the primary user need is to see the results. Using smaller checkboxes lets users see and change search filters without distracting them from the main content. </p>
+      <p>Small checkboxes can work well on information dense screens in services designed for repeat use, like professional facing systems.</p>
+      <p>In services like these, the risk that they will not be noticed is lower because users return to the screen multiple times.</p>
+
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+            <h1 class="nhsuk-fieldset__heading">
+              Priority
+            </h1>
+          </legend>
+          <div class="nhsuk-checkboxes nhsuk-checkboxes--small">
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="organisation">
+                Routine
+              </label>
+            </div>
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="organisation-2">
+                2 week wait
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <h2 class="nhsuk-u-padding-top-4">Smaller radios</h2>
+      <p>Use standard-sized buttons in nearly all cases. However, smaller versions work well on pages where it’s helpful to make them less visually prominent.</p>
+      <p>For example, on a page of search results, the primary user need is to see the results. Using smaller buttons lets users see and change search filters without distracting them from the main content.</p>
+      <p>Small buttons can work well on information dense screens in services designed for repeat use, like professional facing systems.</p>
+      <p>In services like these, the risk that they will not be noticed is lower because users return to the screen multiple times.</p>
+
+<button class="nhsuk-button--small" type="submit">
+  Save and continue
+</button>
+
+    </div>
+  </div>
+{% endblock %}
